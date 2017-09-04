@@ -6,7 +6,6 @@
   file: path={{zookeeper_dir}} state=directory
 
 - name: Download zookeeper version.
-  environment: "{{proxy_env}}"
   get_url: url={{zookeeper_url}} dest={{zookeeper_tarball_dir}}/zookeeper-{{zookeeper_version}}.tar.gz
   tags: bootstrap
 
